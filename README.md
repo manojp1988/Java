@@ -1,3 +1,3 @@
-** This project contains java core concepts demo **
+**This project contains java core concepts demo**
 
 1) Thread safe demo
