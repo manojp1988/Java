@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://sample.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://sample.com" xmlns:intf="http://sample.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://sample.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getCategory">
+    <complexType>
+     <sequence>
+      <element name="age" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCategoryResponse">
+    <complexType>
+     <sequence>
+      <element name="getCategoryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getCategoryResponse">
+
+      <wsdl:part element="impl:getCategoryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCategoryRequest">
+
+      <wsdl:part element="impl:getCategory" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Person">
+
+      <wsdl:operation name="getCategory">
+
+         <wsdl:input message="impl:getCategoryRequest" name="getCategoryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCategoryResponse" name="getCategoryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PersonSoapBinding" type="impl:Person">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getCategory">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCategoryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCategoryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PersonService">
+
+      <wsdl:port binding="impl:PersonSoapBinding" name="Person">
+
+         <wsdlsoap:address location="http://localhost:8080/SoapJAXRPCServer/services/Person"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
