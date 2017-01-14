@@ -1,0 +1,105 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<wsse:Security
+			xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+			xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+			SOAP-ENV:mustUnderstand="1">
+			<xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+				Id="EK-ed250c7c-051c-470b-a82b-f39960f69e11">
+				<xenc:EncryptionMethod
+					Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" />
+				<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+					<wsse:SecurityTokenReference>
+						<ds:X509Data>
+							<ds:X509IssuerSerial>
+								<ds:X509IssuerName>CN=manoj
+									periathambi,OU=staffing,O=randstad,L=charllote,ST=nc,C=us
+								</ds:X509IssuerName>
+								<ds:X509SerialNumber>44181594</ds:X509SerialNumber>
+							</ds:X509IssuerSerial>
+						</ds:X509Data>
+					</wsse:SecurityTokenReference>
+				</ds:KeyInfo>
+				<xenc:CipherData>
+					<xenc:CipherValue>WM7jEe+z/iydeAvKUg6UPPKE91w2JCLEOdldNN3H8CvXUxZa0VKwXucTjY4D/UUUVSjfepmFHwsDve2UglHWbNjTmqtdvNATRYgTmhw0zzZbvPGJCLM8Bd/R38OFLIJebMqonZ+GkuiJGUoTXNzw0YEwVKOpIAhkwFFL0eVKZ/tZRpuNh8VAtyiXhw67mLZ7y+tmaC7dP/PBZqQPd316NOIAoXgmHfdks8Ic5dDYE+5pGonHy8BkMyp7sX6SmvlYc2nsJcuZxMnVTvkBIbQGfWAfZk4mXIMmkeuNsoYucxPegqbiSb3O1f6sQKTbk9s46Hx1MA2l2NiHTQjPSzAbgg==
+					</xenc:CipherValue>
+				</xenc:CipherData>
+				<xenc:ReferenceList>
+					<xenc:DataReference URI="#ED-920893c7-f0f2-4c15-8348-86c99d5ff257" />
+				</xenc:ReferenceList>
+			</xenc:EncryptedKey>
+			<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+				Id="SIG-7d036da9-ca0b-49ab-ae11-9783135e9f87">
+				<ds:SignedInfo>
+					<ds:CanonicalizationMethod
+						Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+						<ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"
+							PrefixList="SOAP-ENV" />
+					</ds:CanonicalizationMethod>
+					<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+					<ds:Reference URI="#id-5a98f119-2d08-4522-b1a4-e7f665a841b4">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+								<ec:InclusiveNamespaces
+									xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="" />
+							</ds:Transform>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+						<ds:DigestValue>ItcCLf/wQQqp7VWbzfz9G5pDBqI=</ds:DigestValue>
+					</ds:Reference>
+					<ds:Reference URI="#SC-fa7de436-c39a-458e-b7f9-31926f728965">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+								<ec:InclusiveNamespaces
+									xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="wsse SOAP-ENV" />
+							</ds:Transform>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+						<ds:DigestValue>CtjkLT51nGTbLywPS9zz+jGWdsM=</ds:DigestValue>
+					</ds:Reference>
+				</ds:SignedInfo>
+				<ds:SignatureValue>o5IRklH0HIfkcdHMKNxYmsuFZGyo57pHAgI/GovR5FwhMTeQFSrTbPVVFSduDlZEhz3BbGa44kP+2kJwIXxRs4tXAEbgOAEANnnj1e3x9ny23t7olJ7uWr8OLBL5j88HR+lFO8tztGiwlWe8YqWosxoMQfbHDdPHwgLyZaKWNdtziR/Yt6MRub1fK0yJ96AVWQA8qh8qPB1fbo0WdCJol2ZXzncQM2vCFoFxmvpxDaQoNMsEjnwwGyRQ4Rq+5sfutcLfi5AkmJ1EzGBsLDR6yvlYUIlLhou1V4DgxtAKK3dGQKym4buQhw02UJTXr4FeXQDc+Dml9BAE7FhaMR+KYQ==
+				</ds:SignatureValue>
+				<ds:KeyInfo Id="KI-5fd52d1a-261a-46a6-b9f8-0f4ae42eb6f7">
+					<wsse:SecurityTokenReference
+						wsu:Id="STR-cab5249a-994f-4201-9994-c036ce5d7799">
+						<ds:X509Data>
+							<ds:X509IssuerSerial>
+								<ds:X509IssuerName>CN=manoj
+									periathambi,OU=randstad,O=randstad,L=charlotte,ST=nc,C=us
+								</ds:X509IssuerName>
+								<ds:X509SerialNumber>1221787096</ds:X509SerialNumber>
+							</ds:X509IssuerSerial>
+						</ds:X509Data>
+					</wsse:SecurityTokenReference>
+				</ds:KeyInfo>
+			</ds:Signature>
+			<wsse11:SignatureConfirmation
+				xmlns:wsse11="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"
+				Value="07NRlZ0zZLuLJKNx2SI4sUKdDs5SPlCg6B0RsFcP554ptc4iqIooaknwP74YRMSkqjm1GCr8R53A9YHQEsHTv3T2VacJEQHltG7Rn5SJ+2JFz3BoPCFY6ujCVkJ3netZ20bHBFWwRyMXkysxLT+vsVHyh0mGrdD9E0nTva68FGdajE86hY8Zcbbol4jBTJ1ixy0Kj5OX5jNSjMX7B/YAc29/cMjL01nHXTpU5CwxgwXKQHJmZh1zTLdGFnODauV8F7GQ6uvSbWcFwlDZ+r5Q7m+8dZlB1z+P6MyoxgaiJ7uVvQTQZvVvBQ/AvYTW/+/H5zyJIpyGxwpeTnVgF1z1KA=="
+				wsu:Id="SC-fa7de436-c39a-458e-b7f9-31926f728965" />
+		</wsse:Security>
+	</SOAP-ENV:Header>
+	<SOAP-ENV:Body
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		wsu:Id="id-5a98f119-2d08-4522-b1a4-e7f665a841b4">
+		<ns2:getBeerResponse xmlns:ns2="http://memorynotfound.com/beer">
+			<xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+				Id="ED-920893c7-f0f2-4c15-8348-86c99d5ff257" Type="http://www.w3.org/2001/04/xmlenc#Content">
+				<xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" />
+				<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+					<wsse:SecurityTokenReference
+						xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+						xmlns:wsse11="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"
+						wsse11:TokenType="http://docs.oasis-open.org/wss/oasis-wss-soap-message-security-1.1#EncryptedKey">
+						<wsse:Reference URI="#EK-ed250c7c-051c-470b-a82b-f39960f69e11" />
+					</wsse:SecurityTokenReference>
+				</ds:KeyInfo>
+				<xenc:CipherData>
+					<xenc:CipherValue>fHx+8jXIE9qTTk+w2Y9/DGy98nFJyNzDKKmp3kkpBQr2RxlMDlI/4zKSnjf6znsVT3EAeVMvkxIVBXHl1p9vFFthUWpve1/GR7aF1Bh4my93wsr7OpsONCqYkCMRwr08
+					</xenc:CipherValue>
+				</xenc:CipherData>
+			</xenc:EncryptedData>
+		</ns2:getBeerResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

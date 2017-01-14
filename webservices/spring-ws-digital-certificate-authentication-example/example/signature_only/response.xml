@@ -1,0 +1,11 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns2:getBeerResponse xmlns:ns2="http://memorynotfound.com/beer">
+			<ns2:beer>
+				<ns2:id>2</ns2:id>
+				<ns2:name>Beer name</ns2:name>
+			</ns2:beer>
+		</ns2:getBeerResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
