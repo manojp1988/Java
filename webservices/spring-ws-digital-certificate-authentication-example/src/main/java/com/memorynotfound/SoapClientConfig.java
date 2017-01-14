@@ -1,15 +1,15 @@
 package com.memorynotfound;
 
+import java.io.IOException;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.support.interceptor.ClientInterceptor;
-import org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor;
-import org.springframework.ws.soap.security.wss4j.support.CryptoFactoryBean;
-
-import java.io.IOException;
+import org.springframework.ws.soap.security.wss4j2.Wss4jSecurityInterceptor;
+import org.springframework.ws.soap.security.wss4j2.support.CryptoFactoryBean;
 
 @Configuration
 public class SoapClientConfig {
@@ -18,6 +18,8 @@ public class SoapClientConfig {
     public Wss4jSecurityInterceptor securityInterceptor() throws Exception {
         Wss4jSecurityInterceptor securityInterceptor = new Wss4jSecurityInterceptor();
 
+        securityInterceptor.setValidationActions("NoSecurity");
+        securityInterceptor.setValidateResponse(false);
         // set security actions
         securityInterceptor.setSecurementActions("Timestamp Signature Encrypt");
 

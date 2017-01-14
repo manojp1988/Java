@@ -1,12 +1,13 @@
 package com.memorynotfound;
 
-import com.memorynotfound.beer.Beer;
-import com.memorynotfound.beer.GetBeerRequest;
-import com.memorynotfound.beer.GetBeerResponse;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
+
+import com.memorynotfound.beer.Beer;
+import com.memorynotfound.beer.GetBeerRequest;
+import com.memorynotfound.beer.GetBeerResponse;
 
 @Endpoint
 public class BeerEndpoint {

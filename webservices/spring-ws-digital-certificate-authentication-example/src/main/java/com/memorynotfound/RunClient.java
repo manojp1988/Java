@@ -1,8 +1,9 @@
 package com.memorynotfound;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import com.memorynotfound.beer.GetBeerRequest;
 import com.memorynotfound.beer.GetBeerResponse;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class RunClient {
 
