@@ -11,7 +11,7 @@
             elementFormDefault="qualified" attributeFormDefault="unqualified"
             version="1.0">
 
-            <xsd:element name="person">
+            <xsd:element name="request">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="firstName" type="xsd:string" />
@@ -20,7 +20,7 @@
                 </xsd:complexType>
             </xsd:element>
 
-            <xsd:element name="greeting">
+            <xsd:element name="response">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="greeting" type="xsd:string" />
@@ -31,11 +31,11 @@
     </wsdl:types>
 
     <wsdl:message name="SayHelloInput">
-        <wsdl:part name="person" element="types:person" />
+        <wsdl:part name="request" element="types:request" />
     </wsdl:message>
 
     <wsdl:message name="SayHelloOutput">
-        <wsdl:part name="greeting" element="types:greeting" />
+        <wsdl:part name="response" element="types:response" />
     </wsdl:message>
 
     <wsdl:portType name="HelloWorld_PortType">

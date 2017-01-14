@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<groupId>com.example</groupId>
-	<artifactId>springws-password</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.memorynotfound.spring.ws</groupId>
+    <artifactId>ws-security-certificate-wss4j-security-interceptor</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>SPRING-WS - ${project.artifactId}</name>
+    <url>http://memorynotfound.com</url>
 
-	<name>springWs</name>
-	<description>Demo project for Spring Boot</description>
-
-	<parent>
+  <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.3.RELEASE</version>
@@ -46,6 +46,11 @@
 			<artifactId>wss4j-ws-security-common</artifactId>
 			<version>2.1.7</version>
 		</dependency>
+		 <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+            <version>1.6.3</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.ws</groupId>
 			<artifactId>spring-ws-security</artifactId>
@@ -71,14 +76,15 @@
 					</execution>
 				</executions>
 				<configuration>
-					<schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>
+					<schemaDirectory>${project.basedir}/src/main/resources/xsd</schemaDirectory>
 					<schemaIncludes>
-						<include>*.wsdl</include>
+						<include>*.xsd</include>
 					</schemaIncludes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
 
 
 </project>
