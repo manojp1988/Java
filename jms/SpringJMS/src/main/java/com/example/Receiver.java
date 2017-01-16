@@ -12,10 +12,6 @@ public class Receiver {
 		
 		System.out.println(msg.getHeaders());
 	
-		if(true){
-			throw new Exception("Message processing failed");
-		}
-		
 	}
 	
 }
