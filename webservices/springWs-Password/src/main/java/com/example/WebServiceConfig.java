@@ -19,6 +19,7 @@ import org.springframework.ws.wsdl.wsdl11.Wsdl11Definition;
 
 /**
  * 
+ * This can be replaced by {@link: http://docs.spring.io/spring-ws/docs/current/reference/html/server.html}
  * @author manojperiathambi
  *
  */
