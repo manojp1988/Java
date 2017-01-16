@@ -16,3 +16,7 @@ I have used the tutorial from [here](http://www.source4code.info/2016/10/spring-
 	3. @Endpoint, @PayloadRoot @EnableWs are important annotations.
 
 I have used [this](http://memorynotfound.com/category/spring-framework/spring-ws/) tutorial to secure the soap service.
+
+##Spring soap ws tutorial.
+
+http://docs.spring.io/spring-ws/docs/current/reference/html/server.html
