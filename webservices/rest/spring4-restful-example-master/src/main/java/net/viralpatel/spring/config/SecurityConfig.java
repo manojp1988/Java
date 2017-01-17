@@ -31,6 +31,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);//We don't need sessions to be created.
     }
      
+    /*
+     * 
+     * Spring security generates html based error message. For rest api, we dont need html tags. So to
+     * provide simple message we need this.
+     */
+ 
     @Bean
     public CustomBasicAuthenticationEntryPoint getBasicAuthEntryPoint(){
         return new CustomBasicAuthenticationEntryPoint();
