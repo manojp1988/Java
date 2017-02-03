@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         valueBar.setOnValueBarMoved(new ValueBar.OnValueBarMoved() {
             @Override
             public void movedTo(int newPosition) {
-                Toast.makeText(MainActivity.this, String.valueOf(newPosition), Toast.LENGTH_SHORT).show();
                 valueSelector.setValue(newPosition);
             }
         });

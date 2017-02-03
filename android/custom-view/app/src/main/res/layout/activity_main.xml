@@ -19,13 +19,6 @@
     </com.intertech.customviews.ValueSelector>
 
 
-    <Button
-        android:id="@+id/updateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/updateButtonMargin"
-        android:text="Update"/>
 
     <com.intertech.customviews.ValueBar
         android:id="@+id/valueBar"
